@@ -1,0 +1,421 @@
+/***********************
+COLOR GUIDE:
+#  Black (navigation): #111111
+#  Light Gray (Navication links): CECECE
+#  Fire Engine Red (Links): #ce1b28
+#  Davys Gray (Sub Navigations Link): #474747
+#  white (background Sub Navigations Link ): FFFFFF
+#  Onyx (body): 444444
+*********************************/
+
+h1, h2, #locatie, .kamerInfo, .nav, #subNav {text-align: center;}
+
+a, .subNavLink, .hero h1 {text-decoration: none;}
+
+.active, .subNavLink, h1, h2 {text-decoration: underline;}
+
+/*------------Nav $ SubNav--------------*/
+.nav {
+	background: #111111;
+	font-size: 2rem;
+}
+nav a {color: #cecece;}
+
+a {
+	color: #ce1b28;
+	font-size: 1.2rem;
+}
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+li {display: inline;}
+
+/*#subNav {background: #F8F4E8;}*/
+
+.subNavLink {
+	color: #ce1b28;
+    color: #474747;
+    background: white;
+    padding: 8px;
+	border-radius: 4px;
+	display:inline-block;
+}
+
+/***************************
+1. Universal Styles
+****************************/
+
+body {
+	font-family: sans-serif;
+	font-size: 13px;
+	color:#444444;
+	background: white;
+	margin: 0;
+	background: #f8f4e8 ;
+	height: 100%;
+}
+
+h1 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+	font-size: 21px;
+	font-weight: 700;
+}
+
+main {
+	margin: 0 auto;
+	width: 75%;
+	margin-top: 1rem;
+}
+
+section{
+	margin-bottom: 1rem;
+	padding: 5%;
+	background: #fcfcfc;
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0, 0.025);
+	border-radius: 5px;
+	border: inset 1px rgba(0,0,0, 0.2);
+}
+
+p {
+	margin-bottom: 2rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#locatie {
+	padding: 5px;
+	font-size: 1.2rem;
+}
+
+.bevestiging {display: none;}
+
+.kamerImg {
+	display: block;
+	margin: 0 auto;
+	width:100%;
+	height:400px;
+	margin-bottom: 2rem;
+}
+.kamerInfo {
+	border: 1px solid brown;
+	width: 33%;
+	padding: 10px;
+}
+/*******Buttons***********/
+.btnStyle {
+	background-color: #ffa900;
+	color: white;
+	text-transform: uppercase;
+	font-size: 15px;
+	width: 170px;
+	padding: 14px 10px;
+	border: 2px solid hsl(30, 40%, 67%);
+	border-radius: 8px;
+	cursor: pointer; 
+	font-weight: 600;
+}
+.btnStyle:hover {
+	color: #fabe0a;
+	background: #131210;
+}
+
+/*********Hero Image**************/
+.hero {
+	background-image: url(../images/hotelHeader.jpg);
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero h1{
+	color:white;
+	margin-bottom: 0;
+}
+/********tabel*********/
+
+caption {
+	font-size: 1rem;
+	padding: 4px 0;
+	text-align: center;
+	color: rgba(119, 112, 112, 0.979);
+}
+
+table {
+	border-collapse: collapse;
+	margin: auto;
+}
+
+th {
+	background-color: #CCAE51;
+	border: 2px solid black;
+	padding: 5px;
+	font-weight: bold;
+}
+
+td {
+	border: 2px solid #CCAE51;
+	padding: 5px;
+	text-align: center;
+}
+
+tbody tr:nth-child(even) {
+	background-color: rgba(204, 174, 81, 0.2);
+}
+td:nth-child(1) {  /****oplossing voor vaste velden****/
+	width: 10%;
+}
+td:nth-child(2) {
+	width: 20%;
+} 
+td:nth-child(3){
+	width: 10%;
+} 
+td:nth-child(4){
+	width: 65%;
+}
+
+/***************tablescroll**********/
+  .tablescroll {
+	  overflow: auto;
+  }
+/***********Media Query voor de table**********/
+  
+ @media screen and (max-width: 375px) {
+		caption {
+		background-color: #3F2B21;
+		color: white;
+	} 
+	table, tr, td {
+		display: block;
+		text-align: left;
+	}
+	th, thead {
+		display: none;
+	}
+	td:nth-child(1)::before{
+		content: "Gerecht: ";
+	}
+	td:nth-child(2)::before{
+		content: "Omschrijving: ";
+	}
+	td:nth-child(3)::before{
+		content: "Prijs: ";
+	}
+	td:nth-child(4)::before{
+		content: "Allergie informatie: ";
+	}
+	td:nth-child(1) {
+		width: 94%;
+	}
+	td:nth-child(2) {
+		width: 94%;
+	} 
+	td:nth-child(3) {
+		width: 94%;
+	} 
+	td:nth-child(4) {
+		width: 94%;
+	}
+ }
+ /*******MAKING FORMS INTERACTIVE*****/
+
+ input:valid {border: 2px solid green;}
+
+ input:invalid {border: 2px groove red;}
+ 
+   /**** andere optie ****/
+ /* input:required {  
+	border: 2px solid red;
+} */
+
+/*******opmaken van het formulier*************/
+
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: 100%;
+}
+
+input, select, textarea {
+	-webkit-box-sizing: border-box;
+	box-sizing: border box;
+}
+
+.form h2 {
+	font-size: 2.5em;
+	text-decoration: none;
+	text-align: left;
+}
+
+input[type="text"], input[type="number"], input[type="date"],input[type="email"] {
+	font-size: 1.5em;
+	width: 50%;
+	padding: 8px;
+	margin: 10px 10px 10px 10px;
+	border-radius: 7px;
+	background-color: #f8f4e8;
+}
+
+#postcode {width: 125px;}
+#aankomstdatum, #vertrkdatum, #kamers {width:200px;}
+
+label {
+	font-size:1.3em;
+	padding: 5px;
+	width: 6.5em;
+	display: inline-block;
+	margin: 6px;
+} 
+
+select {
+	padding: 8px 1em 8px 8px;
+	background-color:#f8f4e8;
+	border: 2px solid #af6013;
+	margin-left: 8px;
+	font-size: 1rem;
+}
+
+fieldset {
+	border-width: 0;
+	padding: 0;
+}
+legend {font-size: 1.4em;}
+
+.btnFor {
+	background-color: #ffa900;
+	border: 2px solid #af611378;
+	border-radius: 8px;
+	cursor: pointer; 
+	padding: 10px 10px;
+}
+.btnLink {
+	color: white;
+	text-transform: capitalize;
+	font-size:1.5em;
+}
+.btnFor:hover {background: #131210;}
+.btnLink:hover {color: #fabe0a;}
+
+.reservtext{
+	font-size: 30px;
+	padding-top: 30px;
+	color: #ffa900;
+}
+
+/*******Media Query Form***************/
+
+@media screen and (max-width: 375px) {
+	.form h2 {font-size: 1.5em;}
+
+	input[type="text"], input[type="number"], input[type="date"],input[type="email"] {
+		width: 90%;
+		margin: .2em auto .2em auto;
+	}
+
+	label {
+		display: block;
+	 	margin: 0px;
+	}
+
+	input[type="radio"] + label {
+		display: inline;
+	}
+
+	#aankomstdatum, #vertrkdatum {width:71%;}
+	#kamers {width: 25%;}
+
+	.btnFor {
+		width:50%;
+		height: 42px;
+		font-size: 10px;
+		padding: 6px;
+	}
+}
+	/* .flexbox {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	.kamerInfo {
+		border: 1px solid brown;
+		width: 100%;
+		padding: 10px;
+} */
+/****************************
+4. Media Query
+*****************************/
+
+@media screen and (max-width: 360px) {
+	ul {padding-left: 0px;}
+
+	h1.hero {margin-top: 0px;}
+
+	.hero {height: 200px;}
+
+	p {margin: 0;}
+
+	section #hotel {padding: 0%;}
+
+	section #restaurant{
+		padding: 0%;
+		margin: 0;
+	}
+
+	.nav {font-size: 1rem;}
+
+	h2 {margin: 10px;}
+
+	section #menu {padding: 0px;}
+
+	h1 {
+		font-size: 1.3rem;
+		text-decoration:none;
+	}
+	
+	.kamerInfo {
+		margin-bottom: 15px;
+		width: 100%;
+		text-align: center;
+		padding: 0px;
+	}
+	.subNavLink {
+		padding:0px;
+		font-size:16px;
+	}
+	.kamerImg {height: 185px;}
+
+	.btnStyle {margin-top: 20px;}
+	
+	section.contact {padding-bottom: 30%;}
+}
+	@media screen and (min-width:361px) { 
+	.flexbox {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	.locatie {
+		float: left;
+		width: 37%;
+		height: 200px;
+	}
+	
+	.contact {
+		float: right;
+		width: 37%;
+		height: 200px;
+	}
+} 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/master.css">
+	<title>Kamer Reserveren</title>
+</head> <!-- head -->
+<body>
+	<nav class="nav">
+		<ul>
+			<li><a href="index.html" title="Home">Home</a></li>
+			<li><a href="restaurant.html" title="Restaurant">Restaurant</a></li>
+			<li><a href="kamer_reserveren.html" title="Kamers reserveren" class="active">Kamers reserveren</a></li>
+			<li><a href="contact.html" title="contact">Contact</a></li>
+		</ul> 
+	</nav> <!--nav -->	
+	    <header role="banner">
+        <h1>The Academy Hotel - Kamer reserveren</h1>
+        <nav id="subNav">
+            <a class="subNavLink" href="#standaard">Onze standaardkamer</a> 
+            <a class="subNavLink" href="#familie">Onze familiekamer</a> 
+            <a class="subNavLink" href="#suite">Onze suite</a>
+        </nav> <!-- subnav -->
+    </header><!-- header -->
+    <main >
+        <section class="bevestiging">
+            <p>Deze kamer is gereserveerd.</p>
+            <button id="annuleren" class="btnStyle">anuleren</button>
+        </section> <!-- bevestiging sectie -->
+        <section class="flexbox" > 
+            <article id="standaard" class="kamerInfo">
+                <h2>Onze standaardkamer</h2>
+                <img class="kamerImg" src="images/standaardkamer.jpg" alt="">
+                <h3>Comfortabele hotelkamers voor een ontspannen verblijf.</h3>
+                <p>
+                    Hotelkamers beschikken over twinbedden, een gezellig zitje in de kamer, een eigen badkamer met
+                    douche en toilet en een eigen terras.</p>
+                <button id="reserveerBtn" class="btnStyle">Reserveer nu</button>
+            </article> <!-- standaard -->
+
+            <article id="familie" class="kamerInfo">
+                <h2>Onze familiekamer</h2>
+                <img class="kamerImg" src="images/familiekamer.jpg" alt="">
+                <h3> Ruime familiekamers voor het hele gezin.</h3>
+
+                <p>Familiekamers zijn geschikt voor gezinnen, families of groepen. Deze kamers voor 4, 5 of 6 personen
+                    hebben
+                    een aparte woonkamer, twee slaapkamers, een badkamer en een eigen terras.</p>
+                <button id="mooieKnop" class="btnStyle">Reserveer nu</button>
+            </article> <!-- familie -->
+
+            <article id="suite" class="kamerInfo">
+                <h2>Onze suite</h2>
+                <img id="suiteImg" class="kamerImg" src="images/suiteKamer.jpg"
+                    alt="Klik op de foto om deze kamer te reserveren.">
+                <h3>Luxe, ruime suites voor extra comfort.</h3>
+                <p> De suites zijn rustig gelegen en hebben een moderne uitstraling. In de suite kunt u genieten van een
+                    aparte woonkamer en ruime slaapkamer. De luxe badkamer biedt een comfortabel ligbad, inloopdouche en
+                    toilet.</p>
+                <button id="suiteBtn" class="btnStyle">Reserveer nu </button>           
+            </article> <!-- suite -->
+        </section> <!--Kamers -->
+        <section class="form">  <!--Form-->
+            <h2>Reserveringsformulier</h2><br><br>
+            <form id="bookingform" method="post" action="" name="bookingform">
+                <label for="voornaam">Voornaam </label><input type="text" id="voornaam" naam="voornaam" required><br><br>
+                <label for="achternaam">Achternaam </label><input type="text" id="achternaam" naam="achternaam" required><br><br>
+                <!-- <fieldset>
+                    <legend>Geslacht</legend>
+                    <input type="radio" id="vrouw" name="geslacht" value="vrouw"><label for="vrouw">vrouw</label>
+                    <input type="radio" id="man" name="geslacht" value="man"><label for="man">Man</label>
+                </fieldset><br> -->
+                    <fieldset>
+                    <label>Geslacht</label>
+                    <input type="radio" id="vrouw" name="geslacht" value="vrouw"><label for="vrouw">vrouw</label>
+                    <input type="radio" id="man" name="geslacht" value="man"><label for="man">Man</label><br>
+                </fieldset><br>
+                <label for="adres">Adres </label><input type="text" id="adres" name="adres"><br><br>
+                <label for="postcode">Postcode </label><input type="text" id="postcode" name="postcode"><br><br>
+                <label for="plaats">Plaats </label><input type="text" id="plaats" name="plaats"><br><br>
+                <label for="land">Land </label>
+                <select id="land" name="land">
+                    <option value="Egypte">Egypte</option>
+                    <option value="Nederland">Nederland</option>
+                    <option value="Syrië">Syrië</option>
+                    <option value="Spanje">Spanje</option>
+                    <option value="Turkije">Turkije</option>
+                </select><br><br>
+                <label for="email">E-mailadres </label><input type="email" id="email" name="email" multiple required><br><br>
+                <label for="aankomstdatum">Aankomstdatum </label><input type="date" id="aankomstdatum" name="aankomstdatum" required><br><br>
+                <label for="vertrekdatum">Vertrekdatum </label><input type="date" id="vertrkdatum" name="vertrekdatum" required><br><br>
+                <label for="kamers">Aantal kamers </label><input type="number" id="kamers" name="kamers" required><br><br>
+                <button type="submit" class="btnFor"><a class="btnLink" href="succes.html">Reserveer deze kamer</a></button>
+            </form>
+        </section>
+    </main><!-- main -->
+    <script src="js/script.js"></script>
+    <!-- <script src="js/script _mooieoplossing.js"></script> -->
+</body> <!-- body -->
+</html>	<!-- html -->
